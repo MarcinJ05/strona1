@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Papier, Kamień i Nożyce.</title>
+    <link rel="stylesheet" href="styl.css">
+<script>
+    let liczba_gier=0;
+    let komunikat="";
+    let kolor_komunikatu="";
+    let wybor_komputer=0,wybor_gracz=0;
+    let punkty_gracz=0,punkty_komputer=0;
+    let nazwy_wybor=["Nożyczki","Kamień","Papier"];
+
+    function aktualizuj(ktory_przycisk)
+    {
+
+    if(ktory_przycisk==0)
+        {
+            liczba_gier=0;
+            komunikat="NOWA GRA. POWODZENIA !!!";
+            kolor_komunikatu="Open Sans,Helvetica,sans-serif";
+            kolor_komunikatu="white";
+            punkty_gracz=0;
+            punkty_komputer=0;
+        }
+
+    else{
+        liczba_gier++;
+        wybor_komputer=Math.floor(Math.random()*3)+1;
+        wybor_gracz=ktory_przycisk;
+        if(wybor_gracz==wybor_komputer)
+            {
+        komunikat="REMIS !!! WYBRALIŚCIE " +nazwy_wybor[wybor_gracz-1];
+        kolor_komunikatu="#Open Sans,Helvetica,sans-serif"; 
+        kolor_komunikatu="#ffca61"; 
+        punkty_gracz++;
+        punkty_komputer++;
+            }
+
+            else if(((wybor_gracz==1) &&(wybor_komputer==3)) ||
+            ((wybor_gracz==2) && (wybor_komputer==1)) ||
+            ((wybor_gracz==3) && (wybor_komputer==2)))
+            {
+                punkty_gracz+=3;
+                komunikat="WYGRAŁEŚ !!! <br> Wybrałeś "+nazwy_wybor[wybor_gracz-1]+", a komputer wybrał "+nazwy_wybor[wybor_komputer-1];
+                kolor_komunikatu="#Open Sans,Helvetica,sans-serif"; 
+                kolor_komunikatu="#61ff83"; 
+
+
+            }
+            else{
+                punkty_komputer+=3;
+                komunikat="WYGRAŁ KOMPUTER !!! <br> Wybrałeś "+nazwy_wybor[wybor_gracz-1]+", a komputer wybrał "+nazwy_wybor[wybor_komputer-1];
+                kolor_komunikatu="#Open Sans,Helvetica,sans-serif"; 
+                kolor_komunikatu="#ff6161";
+            }
+
+                 if (((wybor_gracz==4) && (wybor_komputer==1)) ||
+                     ((wybor_gracz==4) && (wybor_komputer==2)) ||
+                     ((wybor_gracz==4) && (wybor_komputer==3)))
+                    {
+                        punkty_gracz+=3;
+                        punkty_komputer-=3;
+                        komunikat="WYGRAŁEŚ !!! <br> Wybrałeś LOSOWO, a komputer wybrał "+nazwy_wybor[wybor_komputer-1];
+                        kolor_komunikatu="#c0ff61";
+                    }     
+                        if(punkty_gracz >= 30){
+                        komunikat="Wygrał gracz !!! <br> Zacznij nową grę !!!";
+                        kolor_komunikatu="#Open Sans,Helvetica,sans-serif"; 
+                        kolor_komunikatu="lightgreen";
+                        }
+
+                        if(punkty_komputer >= 30){
+                        komunikat="Wygrał komputer !!! <br> Zacznij nową grę !!!";
+                        kolor_komunikatu="#Open Sans,Helvetica,sans-serif"; 
+                         kolor_komunikatu="red";
+                        }
+
+        }
+
+        document.getElementById('liczbagier').innerHTML=String(liczba_gier);
+        document.getElementById('komunikat').innerHTML=komunikat;
+        document.getElementById('komunikat').style.color=kolor_komunikatu;
+        document.getElementById('gracz').innerHTML=punkty_gracz;
+        document.getElementById('komputer').innerHTML=punkty_komputer;
+        
+    }
+</script>
+</head>
+<body>
+<h1 id="komunikat">PAPIER KAMIEŃ NOŻYCE</h1>
+<br><br>
+<div class="gora">
+<table>
+    <tr>
+        <td class="G">LICZBA GIER</td>
+        <td class="G">GRACZ</td>
+        <td class="G">KOMPUTER</td>
+    </tr>
+    <tr>
+        <td class="D" id="liczbagier">0</td>
+        <td class="D" id="gracz">0</td>
+        <td class="D" id="komputer">0</td>
+    </tr>
+</table>
+</div>
+<br><br><br><br><br>
+<div class="srodek1">
+    <center>
+         <img src="scissors.svg" height="160px" width="260px" alt="Nożyczki">
+         <img src="rock.svg" height="160px" width="260px" alt="Kamień">
+         <img src="paper.svg" height="160px" width="260px" alt="Papier">
+    </center>
+</div>
+<br><br>
+<div class="srodek2">
+    <center>
+         <input type="button" class="przycisk1" value="Wybieram Nożyczki" onclick="aktualizuj(1);">
+         <input type="button" class="przycisk1" value="Wybieram Kamień" onclick="aktualizuj(2);">
+         <input type="button" class="przycisk1" value="Wybieram Papier" onclick="aktualizuj(3);">
+    </center>
+</div>
+<br><br>
+<center>
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ DODATKI /////////////////////////////////////////////////////-->
+         <input type="button" class="przycisk3" value="Wygrana Rundy" onclick="aktualizuj(4);">
+</center>
+<br><br><br>
+<div class="dol">
+    <center>
+        <input type="button" class="przycisk2" value="NOWA GRA" onclick="aktualizuj(0);">
+        <a href="zasady.html" class="przycisk2">ZASADY</a>
+    </center>
+</div>
+</body>
+</html>

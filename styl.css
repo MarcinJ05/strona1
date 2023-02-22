@@ -1,0 +1,172 @@
+body{
+background: rgb(82,143,194);
+background: linear-gradient(90deg, rgba(82,143,194,1) 0%, rgba(64,133,190,1) 50%, rgba(55,128,189,1) 100%);
+}
+
+h1{
+color: white;
+font-family: "Open Sans",Helvetica,sans-serif;
+text-align: center;
+font-size:45px;
+}
+
+h2{
+color: white;
+font-family: "Open Sans",Helvetica,sans-serif;
+text-align: center;
+font-size:25px;
+text-transform: capitalize;
+}
+
+p{
+color: white;
+text-align: center;
+font-size: 27px;
+font-family: cursive;
+color: #c0ff61;
+}
+
+table{
+border: 5px solid white;
+border-radius: 10px;
+margin: auto;
+}
+
+.G{
+text-align: center;                                         
+background-color: rgb(82,143,194);
+color: white;
+padding: 60px;
+font-size: 35px;
+font-family: "Open Sans",Helvetica,sans-serif;
+font-weight: 700;
+}
+
+.G:hover{
+text-align: center;                                         
+background-color: rgb(96,167,225);
+color: #c0ff61;
+padding: 60px;
+font-size: 35px;
+font-family: "Open Sans",Helvetica,sans-serif;
+font-weight: 700;
+cursor: pointer;
+}
+
+.D{
+text-align: center;
+background-color: rgb(96, 167, 225);
+color: white;
+padding: 60px;
+font-size: 35px;
+font-family: "Open Sans",Helvetica,sans-serif;
+font-weight: 700;
+}
+
+.D:hover{
+text-align: center;
+background-color: rgb(82,143,194);
+color: #c0ff61;
+padding: 60px;
+font-size: 35px;
+font-family: "Open Sans",Helvetica,sans-serif;
+font-weight: 700;
+cursor: pointer;
+}
+
+.przycisk1{
+background-color: rgb(100, 151, 192);
+color: white;
+border: 3px solid white ;
+border-radius: 50px;
+text-align: center;
+padding:20px;
+font-size:25px;
+font-family: "Open Sans",Helvetica,sans-serif;
+cursor: pointer;
+margin-right: 13px ;
+}
+
+.przycisk1:hover{
+background-color: rgb(100, 151, 192);
+color: #c0ff61;
+border: 3px solid white ;
+border-radius: 50px;
+text-align: center;
+padding:20px;
+font-size:25px;
+font-family: "Open Sans",Helvetica,sans-serif;
+cursor: pointer;
+margin-right: 13px ;
+}
+
+.przycisk2{
+background-color: rgb(100, 151, 192);
+color: white;
+border: 3px solid white ;
+border-radius: 50px;
+text-align: center;
+padding:20px;
+font-size:25px;
+font-family: "Open Sans",Helvetica,sans-serif;
+cursor: pointer;
+margin-right: 13px;
+text-decoration: none;
+}
+
+.przycisk2:hover{
+background-color: rgb(100, 151, 192);
+color: #c0ff61;
+border: 3px solid white ;
+border-radius: 50px;
+text-align: center;
+padding:20px;
+font-size:25px;
+font-family: "Open Sans",Helvetica,sans-serif;
+cursor: pointer;
+margin-right: 13px;
+text-decoration: none;
+}
+
+.przycisk3{
+background-color: rgb(65, 121, 167);
+color: white;
+border: 3px solid white ;
+border-radius: 50px;
+text-align: center;
+padding:20px;
+font-size:25px;
+font-family: "Open Sans",Helvetica,sans-serif;
+cursor: pointer;
+margin-right: 13px;
+text-decoration: none;
+}
+
+.przycisk3:hover{
+background-color: rgb(65, 121, 167);
+color: #c561ff;
+border: 3px solid white ;
+border-radius: 50px;
+text-align: center;
+padding:20px;
+font-size:25px;
+font-family: "Open Sans",Helvetica,sans-serif;
+cursor: pointer;
+margin-right: 13px;
+text-decoration: none;
+}
+
+.przycisk1:active {
+position:relative;
+top:2px;
+}
+
+.przycisk2:active {
+position:relative;
+top:2px;
+}
+
+.przycisk3:active {
+position:relative;
+top:2px;
+}
